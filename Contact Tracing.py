@@ -1,8 +1,4 @@
-#!/usr/bin/env python
-# coding: utf-8
-
-# In[1]:
-
+#Lets import the Libraries First
 
 import pandas as pd
 import numpy as np
@@ -11,14 +7,11 @@ import seaborn as sns
 from sklearn.cluster import DBSCAN
 
 
-# In[2]:
-
-
 df = pd.read_json('livedata.json')
 df.head()
 
 
-# In[3]:
+# let’s analyze the dataset using scatter plot
 
 
 import plotly.express as px
@@ -33,7 +26,8 @@ fig.update_layout({
 fig.show()
 
 
-# In[7]:
+# Create a function to trace
+
 
 
 def get_infected_people(input_name):
@@ -64,7 +58,7 @@ def get_infected_people(input_name):
     return infected_names
 
 
-# In[8]:
+# Trace
 
 
 get_infected_names("David")
